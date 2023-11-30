@@ -3,7 +3,7 @@ import {Routes, Route} from 'react-router-dom';
 import HomePage from '../Pages/HomePage';
 import ProductPage from '../Pages/ProductPage';
 import ProductDetails from '../Pages/ProductDetails';
-import LoginPage from '../Pages/LoginPage.JSX';
+import LoginPage from '../Pages/LoginPage';
 import CartPage from '../Pages/CartPage';
 
 export const AllRoute = () => {
