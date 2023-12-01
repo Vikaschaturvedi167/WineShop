@@ -1,9 +1,65 @@
+
+#maindiv{
+  margin-top: 50px;
+margin-left: 10px;
+}
+#box {
+  border: 2px solid ghostwhite;
+  background-color: #BF0D12;
+  margin-left: 150px;
+  margin-right: 150px;
+  padding: 10px;
+}
+
+#filter {
+
+  
+padding: 50px;
+  margin-bottom: -10px;
+  display: flex;
+  flex-direction: row;
+  margin-top: -70px;
+  
+  box-sizing: border-box; /* Include padding and border in the width/height calculation */
+}
+
+#filterp{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#pricess{
+  font-size: 30px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+#prices{
+  width: 135px;
+  height: 20px;
+  /* margin: 30px; */
+}
+
+
+#select{
+width: 185px;
+height: 30px;
+margin-left: 10px;
+}
+#option{
+  font-size: 18px;
+}
+
+
+
+
 .pagee{
     width: 60px;
     height: 60px;
     color: #c4bfbf;
     background-color: #BF0D12;
     margin: 3.5px;
+    cursor: pointer;
     
 
 }
@@ -16,6 +72,7 @@
     justify-content: center;
     margin-top: 100px;
     margin-bottom: -80px;
+    
 }
 
 .product-list{
@@ -25,6 +82,7 @@
   margin-right: 30px;
   margin-top: 60px;
   padding:  50px;
+  
 }
 .product-item{
     border: 2px solid rgb(203, 199, 199);
@@ -32,6 +90,7 @@
     padding: 20px ;
     background-color: rgb(247, 247, 224);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 .product-item:hover{
     transform: scale(1.05); 
@@ -41,6 +100,25 @@
   width: 270px;
   border: 1px solid gray;
   padding: 20px;
+}
+#flag{
+  width: 20%;
+}
+#reg{
+  font-size: 20px;
+font-weight: bolder;
+color: black;
+
+}
+#rating{
+  text-align: left;
+
+  margin-top: -20px;
+  margin-left: -17px;
+}
+#rate{
+  font-size: 30px;
+  color: black;
 }
 .top>img{
   width: 100%;
@@ -95,24 +173,7 @@
   color: gray;
 }
 
-#pagination{
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-#pagination>button{
-  margin: 10px;
-  padding: 10px;
-  border-radius: 7px;
-  background-color: #BF0D12;
-color: white;
-border: 0px;
-cursor: pointer;
-border: 1px solid #BF0D12;
-width: 50px;
-}
 
- 
 
 
 /* Your existing styles can go here */

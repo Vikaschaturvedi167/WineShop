@@ -96,46 +96,56 @@ for (let i = 1; i <= totalPages; i++) {
 
 
   return (
-    <div>
+    <div id='maindiv'>
       {/* Filter inputs */}
-      <div>
+      <div id='box'>
+      <h2>Apply Filter</h2>
+      <div id='filter'>
+      <div id='fiterp'>
         {/* Price filter */}
-        <label>Price</label>
-        <input type="number" onChange={(e) => handleFilterChange('price', +e.target.value)} />
-
+        <label id='pricess'>Price</label>
+        <input type="number" onChange={(e) => handleFilterChange('price', +e.target.value)} id='prices'/>
+</div>
+<div>
         {/* Category filter */}
-        <label>Category</label>
-        <select onChange={(e) => handleFilterChange('category', e.target.value)}>
-          <option value="">All</option>
-          <option value="Red Wine">Red Wine</option>
-          <option value="White Wine">White Wine</option>
-          <option value="Sparkling Wine">Sparkling Wine</option>
-          <option value="Rose Wine">Rose Wine</option>
+        <label id='pricess'>Category</label>
+        <select onChange={(e) => handleFilterChange('category', e.target.value)} id='select'>
+          <option value="" id='option'>All</option>
+          <option value="Red Wine" id='option'>Red Wine</option>
+          <option value="White Wine" id='option'>White Wine</option>
+          <option value="Sparkling Wine" id='option'>Sparkling Wine</option>
+          <option value="Rose Wine" id='option'>Rose Wine</option>
         </select>
+        </div>
+
 
         {/* Rating filter */}
-        <label>Rating</label>
-        <select onChange={(e) => handleFilterChange('rating', e.target.value)}>
-          <option value="">All</option>
-          <option value="5">⭐⭐⭐⭐⭐</option>
-          <option value="4">⭐⭐⭐⭐</option>
-          <option value="3">⭐⭐⭐</option>
+        <div>
+        <label id='pricess'>Rating</label>
+        <select onChange={(e) => handleFilterChange('rating', e.target.value)} id='select'>
+          <option value="" id='option'>All</option>
+          
+          <option value="5" id='option'>⭐⭐⭐⭐⭐</option>
+          <option value="4" id='option'>⭐⭐⭐⭐</option>
+          <option value="3" id='option'>⭐⭐⭐</option>
           {/* Add more options for other ratings */}
         </select>
-
+</div>
         {/* Country of Origin filter */}
-        <label>Country of Origin</label>
-        <select onChange={(e) => handleFilterChange('country', e.target.value)}>
-          <option value="">All</option>
-          <option value="Italy">Italy</option>
-          <option value="California">California</option>
-          <option value="Spain">Spain</option>
-          <option value="France">France</option>
-          <option value="Portugal">Portugal</option>
+        <div>
+        <label id='pricess'>Country of Origin</label>
+        <select onChange={(e) => handleFilterChange('country', e.target.value)} id='select'>
+          <option value="" id='option'>All</option>
+          <option value="Italy" id='option'>Italy</option>
+          <option value="California" id='option'>California</option>
+          <option value="Spain" id='option'>Spain</option>
+          <option value="France" id='option'>France</option>
+          <option value="Portugal" id='option'>Portugal</option>
           
           {/* Add more options for other countries */}
         </select>
-      </div>
+        </div>
+        </div>
       
       {/* Filter counter */}
       <div>
@@ -143,7 +153,7 @@ for (let i = 1; i <= totalPages; i++) {
           <p>Active Filters: {Object.values(filters).filter(Boolean).length}</p>
         )}
       </div>
-
+</div>
       {/* Display filtered products */}
       <div>
       <div className='pagi'>
@@ -156,21 +166,20 @@ for (let i = 1; i <= totalPages; i++) {
                 localStorage.setItem('details', JSON.stringify(product));
                 window.location.href = './ProductDetails';
               }}>
+              <div id='rating'>
+              <span id='rate'> ⭐: {product.rating} </span>
+            </div>
                 <img src={product.img_url} alt={product.name} />
               </div>
               <div className="nameDiv">
-                <h4>{product.name}</h4>
+                <h2>{product.name}</h2>
               </div>
               <div className="belowName">
-                <img src={product.flag} alt="Flag" />
-                <span>{product.region}</span>
-                <span>{product.category}</span>
-              </div>
-              <div>
-              <p>Rating: {product.rating}</p>
-            </div>
-            
-              <div className="priceDiv">
+                <img src={product.flag} alt="Flag"  id='flag'/>
+                <span id='reg'>{product.region}</span>
+                <span id='reg'>{product.category}</span>
+               </div>
+                <div className="priceDiv">
                 <h3>₹ {product.price}</h3>
                 <button className="cart" onClick={() => handleAddToCart(product)}>+</button>
               </div>
