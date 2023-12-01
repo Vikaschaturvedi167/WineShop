@@ -71,14 +71,25 @@ body {
 #aboutProd{
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    /* text-align:justify; */
-    /* padding-top: 10px; */
-    /* padding-bottom: 10px; */
     margin-left: 4%;
 }
 
+#aboutProd p{
+    margin-top: 40px;
+    padding: 0px;
+
+}
+
+#FootImg{
+    height: 50px;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 #aboutProd h5{
+    margin: 0px;
     font-size: larger;
 }
 
@@ -132,7 +143,8 @@ body {
 }
 #quantityDiv{
     font-size: 13px;
-    color: grey;
+    font-size: large;
+    color: rgb(224, 13, 13);
     margin-top: -10px;
     padding-left: 45px;
 }
