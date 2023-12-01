@@ -1,0 +1,378 @@
+body {
+    background-color: #fff8e9;
+    font-family: 'PT Mono', monospace;
+}
+
+#container{
+    border: 1px solid black;
+    padding: 50px;
+}
+#nameHeading{
+    margin-top: -20px;
+    font-weight: bolder;
+    font-size: 50px;
+}
+#allProdDetails{
+    display: flex;
+    margin-bottom: 60px;
+}
+#allProdDetails> div{
+    border: 1px solid grey;
+}
+/* Image Container */
+#prodImgDiv{
+    display: flex;
+    align-items: center;
+    width: 45%;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#prodImgDiv img{
+    /* width: 100%; */
+    /* height: 500px; */
+}
+/* Product Details Container */
+#prodDetails{
+    width: 55%;
+    letter-spacing: -1px;
+}
+
+/* rate-stock-fav */
+#rate-stock-fav{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+#rate-stock-fav div{
+    flex: 1;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#instockDiv{
+    color: green;
+    font-size: 13px;
+}
+
+/* aboutProd Div */
+#aboutProd{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#aboutProd div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+#colorDiv, #typeDiv, #alcoholDiv, #regionDiv{
+    border-right: 1px solid grey;
+}
+#aboutProd span{
+    font-size: 13px;
+    color: grey;
+}
+/* description of product */
+#description{
+    padding: 10px;
+    padding-right: 100px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    font-size: 15px;
+    letter-spacing: -1px;
+    line-height: -1px;
+    margin-bottom: -30px;
+}
+#bottle-button button{
+    background-color: #fff8e9;
+    margin: 20px;
+    margin-left: 40px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#quantityDiv{
+    font-size: 13px;
+    color: grey;
+    margin-top: -10px;
+    padding-left: 45px;
+}
+/* payment Div */
+#paymentDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid grey;
+    font-size: x-large;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+}
+#paymentDiv button{
+padding: 10px;
+padding-left: 50px;
+padding-right: 50px;
+background-color: #fff8e9;
+}
+#cartDiv button{
+    background-color: #BF0D12;
+    color: white;
+}
+#paymentDiv button:hover{
+    cursor: pointer;
+}
+/* Standard div */
+#standards{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#standards div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* more about wine div.. */
+#moreAboutWine{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+
+}
+#toggleRating{
+    font-size: 40px;
+}
+#toggleRating:hover{
+    cursor: pointer;
+}
+#mbwSubDiv{
+    display: flex;
+    display: none;
+    flex-direction: column;
+    border-bottom: 1px solid grey;
+    
+}
+#mbwSubDiv> div{
+    display: flex;
+    
+}
+#mbwSubDiv> div> div{
+    flex: 1;
+    padding: 20px;
+}
+#mbwSubDiv p, #foodItems, table{
+    font-size: 13px;
+    font-weight: 530;
+}
+#temp-age p{
+    font-size: 16px;
+}
+#foodItems{
+    display: flex;
+    align-items: center;
+}
+
+#foodItems div{
+    margin-top: -10px;
+   padding-top: 8px;
+   padding-bottom: 8px;
+}
+#fi2,#fi3,#fi4,#fi5{
+    padding-right: 20px;
+    padding-left: 20px;
+    border-left: 1px solid grey;
+} 
+#fi1{
+    padding-right: 20px;
+}
+table{
+    font-family: 'PT Mono', monospace;
+    padding-top: 10px;
+}
+#para p{
+    padding-right: 80px;
+}
+
+/* random products display */
+#random{
+    padding: 20px;
+}
+
+#randonProducts{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    padding: 5px;
+}
+#randonProducts>div {
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.42);
+    padding: 15px;
+}
+
+#randonProducts img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: -16px;
+}
+.card1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.card1 button {
+    border: none;
+    font-size: medium;
+    background-color: #fff8e9;
+}
+
+.card1 button:hover {
+    cursor: pointer;
+}
+
+.card2 {
+    text-align: center;
+    margin-bottom: 10px;
+    height: 260px;
+}
+.card2 img:hover{
+    transform: scale(1.1);
+}
+
+.card3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: grey;
+    font-size: smaller;
+    font-weight: 800;
+    margin-top: -25px;
+    border-bottom: 1px solid black;
+}
+
+.card4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: -10px;
+    font-size: large;
+}
+
+.card4 button {
+    border: 1px solid #bf0d12;
+    color: #bf0d12;
+    align-items: center;
+    font-size: large;
+    background-color: #fff8e9;
+
+}
+
+.card4 button:hover {
+    cursor: pointer;
+}
+
+/*  view all button*/
+#view-div{
+    display: flex;
+    justify-content: center;
+    padding-left: 25px;
+    margin-top: 20px;
+}
+#viewAllBtn{
+    background-color: #fff8e9;
+    text-align: center;
+    padding: 7px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+#viewAllBtn:hover{
+  cursor: pointer;
+}
+
+
+
+/* -------------------------------------------------------------------------------------------media queries */
+@media only screen and (min-width: 701px) and (max-width:900px) {
+    #allProdDetails{
+        display: flex;
+        flex-direction: column;
+    }
+    #prodImgDiv {
+        display: flex;
+        width: auto;
+        padding: 0;
+    }
+    #prodDetails {
+        width: 100%;
+    }
+    #prodImgDiv img {
+        width: 100%;
+        height: 400px;
+    }
+
+}
+@media only screen and (max-width:700px) {
+    #allProdDetails{
+        display: flex;
+        flex-direction: column;
+    }
+    #prodImgDiv {
+        display: flex;
+        width: auto;
+        padding: 0;
+    }
+    #prodDetails {
+        width: 100%;
+    }
+    #description {
+        padding-right: 2px;
+        padding-left: 2px;
+       
+    }
+    #paymentDiv button {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    #mbwSubDiv> div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: -30px;
+    }
+    #para p {
+        padding-right: 0;
+        margin-bottom: -10px;
+    }
+    #prodImgDiv img {
+        width: 100%;
+        height: 300px;
+    }
+    
+    
+}
+@media only screen and (max-width:600px){
+    #randonProducts{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        padding: 5px;
+    }
+    #prodImgDiv img {
+        width: 100%;
+        height: 200px;
+    }
+}
