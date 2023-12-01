@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../Style/product.css'
+import './styling/products.css'
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]); // State to hold all products
