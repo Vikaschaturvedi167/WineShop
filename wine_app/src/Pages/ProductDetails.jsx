@@ -31,7 +31,7 @@ const [btn , setBtn]=useState('Add to Cart');
 
 const getProductDetails = async (id) => {
   try {
-    const res = await fetch(`https://server-3o3a.onrender.com/products/1`);
+    const res = await fetch(`https://server-3o3a.onrender.com/products/9`);
     const data = await res.json();
     console.log(data);
     setPdata(data)
@@ -114,6 +114,13 @@ return (
           <img src='https://static.vecteezy.com/system/resources/thumbnails/007/634/442/small/bottle-logo-icon-design-template-free-vector.jpg' style={{mixBlendMode:"darken"}} alt="" />
           <img src='https://media.istockphoto.com/id/1375716890/vector/same-day-delivery-icon-vector-for-graphic-design-logo-website-social-media-mobile-app-ui.jpg?s=612x612&w=0&k=20&c=f0tCmdUgj9Fq0pC1Ni9V6v6Jp0LV0UdrKXSUOUd-0gs=' style={{mixBlendMode:"darken"}} alt="" />
         </div>
+
+      <div id='FootP'>
+        <p>Free Delivery</p>
+        <p>{randomNumbers[3]}{randomNumbers[2]} coins</p>
+        <p>Top Brand</p>
+        <p>One day delivery</p>
+      </div>
       
     </div>
   </div>

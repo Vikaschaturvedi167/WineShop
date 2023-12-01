@@ -23,7 +23,7 @@ body {
    
     
 }
-/* Image Container */
+
 #prodImgDiv{
     display: flex;
     flex-direction: column;
@@ -33,19 +33,15 @@ body {
     border: 1px solid black;
 }
 #prodImgDiv img{
-    /* width: 100%; */
-    margin-left: 10%;
+    margin-left: 0%;
     padding: 20px;
-    /* border: 1px solid black; */
-    /* height: 500px; */
 }
-/* Product Details Container */
+
 #prodDetails{
     width: 70%;
     letter-spacing: -1px;
 }
 
-/* rate-stock-fav */
 #rate-stock-fav{
     display: flex;
     justify-content: space-between;
@@ -60,14 +56,16 @@ body {
     padding-bottom: 30px;
     cursor: pointer;
 }
+
 #instockDiv{
     color: green;
     font-size: 13px;
 }
+
 #SecoundDiv{
     height: 300px;
 }
-/* aboutProd Div */
+
 #aboutProd{
     display: flex;
     flex-direction: column;
@@ -77,15 +75,24 @@ body {
 #aboutProd p{
     margin-top: 40px;
     padding: 0px;
-
 }
 
 #FootImg{
-    height: 50px;
-    width: 20%;
+    padding: 0px;
+    margin-left: 5%;
+    height: 80px;
+    width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+#FootP{
+    width: 90%;
+    margin-left: 6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 #aboutProd h5{
@@ -99,16 +106,17 @@ body {
     margin-top: 10px;
 }
 
-
 #aboutProd div{
     flex: 1;
     border: 1px solid red;
     display: flex;
     flex-direction: column;
 }
+
 #aboutProd p{
     font-size: large;
 }
+
 #aboutProd p:hover{
     cursor: pointer;
     color: #BF0D12;
@@ -117,11 +125,12 @@ body {
 #colorDiv, #typeDiv, #alcoholDiv, #regionDiv{
     border-right: 1px solid grey;
 }
+
 #aboutProd span{
     font-size: 13px;
     color: grey;
 }
-/* description of product */
+
 #description{
     padding: 10px;
     padding-right: 100px;
@@ -133,6 +142,7 @@ body {
     margin-bottom: -30px;
     font-size: large;
 }
+
 #bottle-button button{
     background-color: #fff8e9;
     margin: 20px;
@@ -141,6 +151,7 @@ body {
     padding-left: 30px;
     padding-right: 30px;
 }
+
 #quantityDiv{
     font-size: 13px;
     font-size: large;
@@ -148,7 +159,7 @@ body {
     margin-top: -10px;
     padding-left: 45px;
 }
-/* payment Div */
+
 #paymentDiv{
     display: flex;
     justify-content: space-around;
@@ -159,20 +170,23 @@ body {
     padding-bottom: 30px;
     padding-left: 10px;
 }
+
 #paymentDiv button{
 padding: 10px;
 padding-left: 50px;
 padding-right: 50px;
 background-color: #fff8e9;
 }
+
 #cartDiv button{
     background-color: #BF0D12;
     color: white;
 }
+
 #paymentDiv button:hover{
     cursor: pointer;
 }
-/* Standard div */
+
 #standards{
     display: flex;
     justify-content: space-around;
@@ -180,6 +194,7 @@ background-color: #fff8e9;
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
 #standards div{
     display: flex;
     flex-direction: column;
@@ -188,7 +203,6 @@ background-color: #fff8e9;
     font-weight: 500;
 }
 
-/* more about wine div.. */
 #moreAboutWine{
     display: flex;
     justify-content: space-between;
@@ -196,36 +210,41 @@ background-color: #fff8e9;
     padding: 20px;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
-
 }
+
 #toggleRating{
     font-size: 40px;
 }
+
 #toggleRating:hover{
     cursor: pointer;
 }
+
 #mbwSubDiv{
     display: flex;
     display: none;
     flex-direction: column;
     border-bottom: 1px solid grey;
-    
 }
+
 #mbwSubDiv> div{
     display: flex;
-    
 }
+
 #mbwSubDiv> div> div{
     flex: 1;
     padding: 20px;
 }
+
 #mbwSubDiv p, #foodItems, table{
     font-size: 13px;
     font-weight: 530;
 }
+
 #temp-age p{
     font-size: 16px;
 }
+
 #foodItems{
     display: flex;
     align-items: center;
@@ -236,6 +255,7 @@ background-color: #fff8e9;
    padding-top: 8px;
    padding-bottom: 8px;
 }
+
 #fi2,#fi3,#fi4,#fi5{
     padding-right: 20px;
     padding-left: 20px;
@@ -252,7 +272,6 @@ table{
     padding-right: 80px;
 }
 
-/* random products display */
 #random{
     padding: 20px;
 }
@@ -333,7 +352,6 @@ table{
     cursor: pointer;
 }
 
-/*  view all button*/
 #view-div{
     display: flex;
     justify-content: center;
