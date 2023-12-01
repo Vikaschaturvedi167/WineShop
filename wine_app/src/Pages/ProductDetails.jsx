@@ -17,15 +17,16 @@ const ProductDetails = ({id}) => {
         newRandomNumbers.push(randomNumber);
       }
       setRandomNumbers(newRandomNumbers);
-      console.log(randomNumbers)
+      // console.log(randomNumbers)
     }
     
-    console.log(randomNumbers)
+    // console.log(randomNumbers)
 
   const Navigate = useNavigate()
 
 const [pData , setPdata]=useState([]);
 const [productID , setProductID]=useState('');
+const [heart , setHeart]=useState('🤍');
 const [btn , setBtn]=useState('Add to Cart');
 
 const getProductDetails = async (id) => {
@@ -43,12 +44,15 @@ const getProductDetails = async (id) => {
 // console.log("Hel")
 
 const handleClick = ()=>{
-  // <Link to={"/"} element={<CartPage/>}></Link>
   setProductID(pData.id)
-  // CartAddBtn.innerText="Added",
   setBtn("Added")
-  // alert("Product Added")
   console.log(productID)
+}
+
+const heartClick = ()=>{
+
+  heart==='🤍'?setHeart('❤️'):setHeart('🤍')
+
 }
 
 useEffect(()=>{
@@ -56,25 +60,37 @@ getProductDetails(id)
 generateRandomNumbers()
 },[])
 
+{/* <link rel="icon" href="./Images/mine wine logo.jpg"></link> */}
 return (
   <div id="allProdDetails">
+    {/* <h2>hi</h2> */}
     <div id="prodImgDiv">
       <img src={pData.img_url} alt={pData.name} />
+      <h3>{pData.name}</h3>
     </div>
     <div id="prodDetails">
       <div id="rate-stock-fav">
-        {/* /* Add your rating, stock, and favorites components here */ }
+       
         <span> ★ {pData.rating}</span>
-        <h1>Rating :{pData.rating}</h1>
-        <h1>In stock</h1>
-        <span className="heart">🤍</span>
+        <hr></hr>
+        <span>Rating :{pData.rating}</span>
+        <hr></hr>
+        <span>In stock</span>
+        <hr></hr>
+        
+        <span className="heart" onClick={heartClick}>{heart}</span>
       </div>
-      <div>
+      <div id='SecoundDiv'>
         <div id="aboutProd">
-          {/* Add your about pData components here */}
+         
           <p>Product code: {randomNumbers}</p>
+
+          <h5> Country : {pData.region}   <img id='FlagID' src={pData.flag} alt="" /></h5>
+
         </div>
-        <div id="description">{pData.details}</div>
+        <div id="description">
+          <span>A mix of red and blue fruit thc nose unfolds with distinctive layers of violets. spice notes, and the fresh, haunting quality of an evergreen forest</span>
+        </div>
         <div id="bottle-button">
           <button>0.75 L</button>
           <p id="quantityDiv">{pData.rating} bottles left</p>
@@ -83,13 +99,13 @@ return (
       <div id="paymentDiv">
         <div id="priceDiv">${pData.price}</div>
         <div id="cartDiv">
-          <button>Add to cart</button>
+          <button onClick={handleClick}>{btn}</button>
         </div>
         <div id="quickOrderDiv" onClick={() => window.location.href = 'cart.html'}>
           <button>Quick order</button>
         </div>
       </div>
-      {/* Add the rest of your components */}
+      
     </div>
   </div>
 );
@@ -97,13 +113,3 @@ return (
 
 export default ProductDetails
 
-
-
-// "id": 1,
-// "img_url": "https://icdn.bottlenose.wine/images/full/509218.png?fit=clip&h=442&w=442&auto=format&ixlib=imgixjs-3.6.1",
-// "name": "LaCappuccina Sauvignon Blanc VNS ",
-// "price": "2860",
-// "category": "White Wine",
-// "region": "Italy",
-// "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Italy_with_border.svg/1500px-Flag_of_Italy_with_border.svg.png",
-// "rating": "4"
