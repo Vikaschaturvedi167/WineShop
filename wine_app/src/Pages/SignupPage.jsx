@@ -3,15 +3,16 @@ import './PagesCss/LoginPage.css';
 import {Link} from 'react-router-dom';
 import firebase from './firebaseConfig';
 
-const LoginPage=()=> {
+const SignupPage=()=> {
+    const [name,setName]=useState('')
     const [email,setEmail]=useState('')
     const [pass,setPass]=useState('')
     const submit = async() =>{
-        
+       
         try {
-            const user = await firebase.auth().signInWithEmailAndPassword(email,pass)
+            const user = await firebase.auth().createUserWithEmailAndPassword(email,pass)
             if(user){
-                alert('Login successfully')
+                alert('Account Created successfully')
             }
         } 
         catch (error) {
@@ -25,16 +26,19 @@ const LoginPage=()=> {
             <h2>signup</h2>
         </div>
         <div className='box'>
+            <input type='text' value={name} placeholder='UserName' onChange={(e)=>setName(e.target.value)}></input>
+        </div>
+        <div className='box'>
             <input type='email' value={email} placeholder='E-mail' onChange={(e)=>setEmail(e.target.value)}></input>
         </div>
         <div className='box'>
             <input type='password' value={pass} placeholder='Password' onChange={(e)=>setPass(e.target.value)}></input>
         </div>
-        <p>Don't Have an Account <Link to="/">Create Account</Link></p>
-        <button onClick={()=>submit()}>Login</button>
+        <p>Allready Have an Account <Link to="/login">Login Now</Link></p>
+        <button onClick={()=>submit()}>Signup</button>
       </div>
     </>
   );
 }
 
-export default LoginPage;
+export default SignupPage;
