@@ -3,6 +3,23 @@
   margin-top: 50px;
 margin-left: 10px;
 }
+#load{
+  display:  flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  margin-left: 700px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+#load > img{
+width: 200px;
+}
+#loading{
+  font-size: 100px;
+  font-weight: bolder;
+color: #BF0D12;
+margin-left: -80px;
+}
 #box {
   border: 2px solid ghostwhite;
   background-color: #BF0D12;

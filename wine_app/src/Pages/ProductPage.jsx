@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './styling/products.css'
 
 const ProductPage = () => {
+  const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]); // State to hold all products
   const [filteredProducts, setFilteredProducts] = useState([]); // State to hold filtered products
   const [currentPage, setCurrentPage] = useState(1); // State to manage current page number
@@ -23,9 +24,11 @@ const ProductPage = () => {
         setProducts(data);
         console.log(data);
         setFilteredProducts(data.slice(0, productsPerPage))
+        setLoading(false); 
         // setFilteredProducts(data); // Initialize filtered products with all products
       } catch (error) {
         console.log(error);
+        setLoading(false); 
       }
     };
   
@@ -97,6 +100,18 @@ for (let i = 1; i <= totalPages; i++) {
 
   return (
     <div id='maindiv'>
+    {loading ? ( // Check loading state and display loading message or content accordingly
+        <div id='load'>
+        <div>
+        <img src='https://imgs.search.brave.com/t5GBBUK-CcbirSqKsMaHnLoacA1AT5nD7UaoVlguDQ4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS50ZW5vci5jb20v/MmhOcUtqM0FyWDhB/QUFBai9sb2FkaW5n/LmdpZg.gif' alt='vikas'/>
+        </div>
+        <div>
+
+        <h1 id='loading'>Loading...</h1>
+        </div>
+        </div>
+      ) : (
+        <>
       {/* Filter inputs */}
       <div id='box'>
       <h2>Apply Filter</h2>
@@ -188,7 +203,8 @@ for (let i = 1; i <= totalPages; i++) {
           ))}
         </div>
       </div>
-      
+      </>
+      )}
     </div>
   );
 };
