@@ -106,7 +106,7 @@ function App() {
             </div>
              
         </div>
-        {/* <button><a href="product.html">View all </a><i class="fa-solid fa-arrow-right-long"></i></button> */}
+        {/* <button><a href="product.html">View all </a><i class="fa-solid fa-arrow-right-long"></i></button> */  }
         <button onClick={()=>{navigate("/productpage")}}>View All</button>
     </div>
 
