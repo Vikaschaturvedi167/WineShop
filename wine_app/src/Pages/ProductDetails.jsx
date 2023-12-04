@@ -3,10 +3,11 @@ import { Link, NavLink, useNavigate } from "react-router-dom"
 import CartPage from './CartPage';
 import "./ProductDetail.css"
 
-const ProductDetails = ({id}) => {
+const ProductDetails = ({id='1'}) => {
 
 
   const [randomNumbers, setRandomNumbers] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
  
   
@@ -17,10 +18,11 @@ const ProductDetails = ({id}) => {
         newRandomNumbers.push(randomNumber);
       }
       setRandomNumbers(newRandomNumbers);
-      // console.log(randomNumbers)
+      
     }
-    
-    // console.log(randomNumbers)
+   
+    const bUrl=`https://wine-api.onrender.com/wines`;
+    const Myurl = `https://server-3o3a.onrender.com/products/${id}`;
 
   const Navigate = useNavigate()
 
@@ -31,8 +33,10 @@ const [btn , setBtn]=useState('Add to Cart');
 
 const getProductDetails = async (id) => {
   try {
-    const res = await fetch(`https://server-3o3a.onrender.com/products/9`);
+    setIsLoading(true);
+    const res = await fetch(Myurl);
     const data = await res.json();
+    setIsLoading(false)
     console.log(data);
     setPdata(data)
     // console.log("Hello")
@@ -45,6 +49,7 @@ const getProductDetails = async (id) => {
 
 const handleClick = ()=>{
   setProductID(pData)
+ 
   setBtn("Added")
   console.log(productID)
 }
@@ -60,15 +65,25 @@ getProductDetails(id)
 generateRandomNumbers()
 },[])
 
-{/* <link rel="icon" href="./Images/mine wine logo.jpg"></link> */}
+const navigationFun=()=>{
+
+}
+
 return (
   <div id="allProdDetails">
     {/* <h2>hi</h2> */}
+     {isLoading ? (
+        <div className="loading-container">
+          <div className="loading-spinner"></div>
+        </div>
+      ) : (
     <div id="prodImgDiv">
       <img src={pData.img_url} alt={pData.name} height={"450px"}/>
       
       <h3>{pData.name}</h3>
     </div>
+      )
+}
     <div id="prodDetails">
       <div id="rate-stock-fav">
        
@@ -102,7 +117,7 @@ return (
         <div id="cartDiv">
           <button onClick={handleClick}>{btn}</button>
         </div>
-        <div id="quickOrderDiv" onClick={() => window.location.href = 'cart.html'}>
+        <div id="quickOrderDiv" onClick={() =>{  Navigate("/Cart")}}>
           <button>Quick order</button>
         </div>
         
@@ -128,4 +143,3 @@ return (
 }
 
 export default ProductDetails
-
