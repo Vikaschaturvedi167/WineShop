@@ -1,0 +1,248 @@
+body {
+    background-color: #fff8e9;
+    font-family: 'PT Mono', monospace;
+    /* background-image: url(""); */
+}
+
+#productCode{
+    /* padding-left: 15px; */
+    font-size: 12px;
+    color: grey;
+    letter-spacing: -0.75px;
+    word-spacing: -1px;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+#cart-div{
+    border: 1px solid grey;
+    /* margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 30%; */
+    width: 300px;
+    /* padding: 40px; */
+    /* padding-right: 20px;
+    padding-left: 20px; */
+}
+#cart-div> h1{
+    text-align: center;
+}
+
+
+#display-div img{
+    margin: 0 0 5px 5px;
+    width: 90px;
+    height: 90px;
+}
+#display-div > div{
+    border-top: 1px solid grey;
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    font-size: large;
+    
+    
+}
+#display-div > div:nth-last-child(n){
+    text-align: end;
+    
+}
+
+#quantityDiv button{
+    width: 20px;
+    background-color: #fff8e9;
+    border: none;
+}
+#input-area{
+    width: 20px;
+    background-color: #fff8e9;
+    border: none;
+}
+
+button{
+    background-color: #fff8e9;
+    margin: 10px;
+    height: 20px;
+    border: none;
+    font-size: small;
+    font-weight: bold;
+}
+
+
+#checkout-div{
+    border-top: 1px solid grey;
+
+}
+
+#checkout-div p{
+    font-size: small;
+    color: grey;
+    letter-spacing: -0.75px;
+    word-spacing: -1px;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+#checkout-div i{
+    margin-right: 5px;
+}
+
+#total-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#sub-items{
+    display: flex;
+    align-items: center;
+}
+
+#checkoutBtn{
+    width: 100%;
+    height: 40px;
+    border: 1px solid beige;
+    padding-top: 10px ;
+    padding-bottom: 10px;
+    background-color: #bf0d12;
+    color: white;
+    font-size: medium;
+    font-weight: lighter;
+    transition: all 0.5s;
+}
+
+#checkoutBtn:hover{
+    border: 5px black;
+   
+}
+
+
+
+#checkoutBtn-disabled{
+    width: 100%;
+    border: 1px solid beige;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #bf0d1373;
+    color: #bf0d1373;
+    font-size: medium;
+    font-weight: lighter;
+    cursor: not-allowed; 
+}
+button:hover{
+    cursor: pointer;
+}
+
+.quantity-div{
+    display: flex;
+    /* flex-direction: column; */
+
+}
+
+/* 
+.........................................................................toggel switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 32px; /* Decreased width */
+    height: 16px; /* Decreased height */
+    border: 1px solid #bf0d12;
+    border-radius: 30px;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff8e9;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px; /* Decreased thumb height */
+    width: 12px; /* Decreased thumb width */
+    left: 2px; /* Decreased left offset */
+    bottom: 2px; /* Decreased bottom offset */
+    background-color: #bf0d12;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  
+  input:checked + .slider {
+    background-color: #bf0d12;
+    
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #bf0d12;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+    background-color: #fff8e9;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 30px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+    
+   
+  }
+
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------media queries */
+@media only screen and (min-width: 701px) and (max-width:1000px) {
+    #cart-div {
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+      }
+
+}
+@media only screen and (max-width:700px) {
+  
+    #cart-div {
+        width: 90%;
+        margin: auto;
+        padding: 5px;
+        margin-top: 5%;
+      }
+      #display-div img{
+        width: 80px;
+        height: 80px;
+    }
+    #display-div > div{
+        font-size: medium;
+        
+        
+    }
+    #quantityDiv button{
+        width: 8px;
+        background-color: #fff8e9;
+    }
+    #input-area{
+        width: 8px;
+        background-color: #fff8e9;
+    }
+}
+
+body {
+    background-color: #fff8e9;
+    font-family: 'PT Mono', monospace;
+}
