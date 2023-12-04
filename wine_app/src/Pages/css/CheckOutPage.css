@@ -1,0 +1,103 @@
+body{
+    background-color:#fff8e9;
+}
+#info{
+    padding: 30px 80px;
+    display: flex;
+}
+#left{
+    border: 1px solid black;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+    width: 70%;
+    padding: 20px;
+}
+#right{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    width: 30%;
+    margin-left: 8%;
+    padding: 5px;
+}
+#topLeft{
+    display: flex;
+    justify-content: space-between;
+}
+#fullName{
+    display: flex;
+    justify-content: space-between;
+}
+#right{
+
+    padding: 0px 20px;
+}
+#topRight{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+}
+#topRight p{
+    color: cadetblue;
+    margin-top: 25px;
+}
+#freeShopping{
+    text-align: center;
+    border: 2px solid rgb(154, 241, 198);
+    padding: 5px;
+    border-radius: 3px;
+}
+h1{
+    font-size: 40px;
+}
+label{
+    font-size: 20px;
+}
+input{
+    padding: 12px 8px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    width: 97%;
+    border-radius: 3px;
+    border: 1px solid black;
+    font-size: 16px;
+    background-color: #fff8e9;
+}
+#details{
+    margin-top: 30px;
+}
+#fullName input{
+    width: 300px;
+}
+button{
+    width: 100%;
+    height: 20px;
+    margin-top: 15px;
+   padding-top: 10px;
+   padding-bottom: 30px;
+    font-size: 20px;
+    background-color: #bf0d12;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.fa-solid{
+    margin-top: 20px;
+}
+
+#image img{
+    width: 60%;
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+}
+#discountPrice{
+    text-decoration: line-through;
+}
+#prices{
+    display: flex;
+    justify-content: space-between;
+}
+#total{
+    display: flex;
+    justify-content: space-between;
+}

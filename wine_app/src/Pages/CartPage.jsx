@@ -1,24 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import "../css/CartPage.css"
-const CartPage = () =>  {
+import "./css/CartPage.css"
+const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [over18, set18] = useState(false);
 
   useEffect(() => {
     // Initial data (replace this with your actual initial data)
     const initialData = [
       {
-        name: 'Product 1',
-        image_url: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
+        name: "Château Margaux",
+        image_url:
+          "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2017/11/margaux-2015-limited-release.jpg",
         qty: 2,
         price: 25.99,
         quantity: 10,
+        productCode: "Product code: 15937",
+        crossProce: 29.9,
+        year: 2015,
       },
       {
-        name: 'Product 2',
-        image_url: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
+        name: "Chardonnay Reserve",
+        image_url:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoMp6R04hnvUdeMuJLvlXafVxJNNSo7bwVuW6JE27lj9szwekR9eaf6HUWaqxfy4U0o_8&usqp=CAU",
         qty: 1,
         price: 19.99,
         quantity: 15,
+        productCode: "Product code: 15937",
+        crossProce: 29.9,
+        year: 2015,
       },
       // Add more initial data as needed
     ];
@@ -48,18 +57,37 @@ const CartPage = () =>  {
   };
 
   return (
-    <div id="cart-div">
+    <div id="cart-div" style={{width:"50%", marginLeft:"350px"}}>
       <h1>Shopping Cart</h1>
       <div id="display-div">
         {cartItems.map((item, index) => (
-          <div key={index}>
+          <div key={index} >
             {/* Render your item details here */}
             <img src={item.image_url} alt={item.name} />
-            <h5>{item.name}</h5>
-            <div id="quantity-div" style={{display:"flex", flexDirection:"column"}}>
-              <button
+            <div
+              style={{
+                display: "flex",
+                width: "150px",
+                flexDirection: "column",
+                justifyContent: "start",
+                alignItems: "flex-start",
+                textAlign: "start",
+                padding: "5px",
+                alignItems: "flex-start",
+              }}
+            >
+              <h5 >{item.name}</h5>
+              <p id="productCode">Year:{item.year}</p>
+            </div>
 
-              disabled={item.qty==0}
+            {/* <p>{item.productCode}</p> */}
+
+            <div
+              id="quantity-div"
+              style={{ display: "flex", flexDirection: "column" }}
+            >
+              <button
+                disabled={item.qty == 0}
                 onClick={() => handleQuantityChange(index, item.qty - 1)}
               >
                 -
@@ -69,23 +97,39 @@ const CartPage = () =>  {
                 value={item.qty}
                 onChange={(e) => handleQuantityChange(index, e.target.value)}
               /> */}
-              <h5 style={{textAlign:"center"}}>{item.qty}</h5>
-              <button
-                onClick={() => handleQuantityChange(index, item.qty + 1)}
-              >
-                +
+              <h5 style={{ textAlign: "center" }}>{item.qty}</h5>
+              <button onClick={() => handleQuantityChange(index, item.qty + 1)}>
+              +
               </button>
             </div>
             <h5>${(item.price * item.qty).toFixed(2)}</h5>
             <div id="delete-div">
-              <button onClick={() => handleDelete(index)}>Delete</button>
+              <button onClick={() => handleDelete(index)}>Remove</button>
             </div>
           </div>
         ))}
       </div>
       <div id="checkout-div">
         {/* Your checkout details */}
-        <h5>I am 18+</h5>
+        <div className="Over-18">
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <label class="switch">
+              <input
+                type="checkbox"
+                onClick={() => {
+                  set18(!over18);
+                }}
+              />
+              <span class="slider round"></span>
+            </label>
+            <h5 style={{ marginLeft: "10px" }}>I am 18+</h5>
+          </div>
+          <p style={{ textAlign: "start" }}>
+            {" "}
+            An adult signature (18+) is required for delivery
+          </p>
+        </div>
+
         {/* ... (other checkout details) */}
         <div id="total-price">
           <div id="sub-items">
@@ -94,12 +138,16 @@ const CartPage = () =>  {
           </div>
           <div id="price-total">{`$${totalPriceShow()}`}</div>
         </div>
-        <button id="checkoutBtn" onClick={() => window.location.href = '#'}>
-          Checkout
+        <button
+          id={!over18 ? "checkoutBtn-disabled" : "checkoutBtn"}
+          disabled={!over18}
+          onClick={() => (window.location.href = "#")}
+        >
+          <span>Checkout </span>
         </button>
       </div>
     </div>
   );
 };
 
-export default CartPage
+export default CartPage;
