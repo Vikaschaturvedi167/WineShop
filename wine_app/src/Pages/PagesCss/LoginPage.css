@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.main_container_signup{
+    background: #fff8e9;
+    padding: 20px 30px;
+    margin: 0px auto;
+    width: 400px;
+    margin-top: 100px;
+    border-top: 5px solid black;
+}
+.main_container_signup .header{
+    width: 100%;
+}
+.main_container_signup .header h2{
+    text-align: center;
+    color: black;
+    font-size:18px ;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.main_container_signup .box{
+    width: 100%;
+    margin-top: 10px;
+}
+.main_container_signup .box input{
+    width: 80%;
+    padding: 10px 20px;
+    margin-left: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+.main_container_signup p{
+    margin-top: 15px;
+    font-size: 12px;
+    color: #232323;
+    margin-left: 30px;
+    font-weight: 600;
+}
+.main_container_signup button{
+    margin-top: 10px;
+    margin-left: 35%;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: black;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
