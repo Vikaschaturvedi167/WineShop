@@ -94,4 +94,31 @@ body{
   }
   
   /* Add more styles as needed for your design */
-  
+  @media (max-width : 500px){
+    #secoudDiv{
+      display: none;
+    }
+    #upper_nav > #left{
+      display: none;
+    }
+    #upper_nav > #right{
+      display: flex;
+      padding-left: 180px;
+    }
+    #nav_middle h4{
+      display: none;
+    }
+    #lower_nav div h1{
+      font-size: 20px;
+    }
+    #lower_nav div:nth-child(3){
+      display: flex;
+      align-items: center;
+    }
+    
+  }
+  @media (max-width :700px){
+    #secoudDiv{
+      display: none;
+    }
+  }

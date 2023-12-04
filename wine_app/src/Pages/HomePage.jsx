@@ -20,15 +20,16 @@ function App() {
     return (
  <div>
             
-            {/* Popup */}
+            {/* {/* Popup } */}
             {isPopupVisible ? (
-           <div id="popup">
-                <div id="popup-content">
+            <div id="popup">
+                 <div id="popup-content">
                     <p>Are you over 18 years old?</p>
                     <button id="yes-button" onClick={handlePopUp}>Yes, I'm confirmed!</button>
                     <button id="no-button" onClick={handlePopNo}>No, I'm not 18+</button>
-                </div>
-            </div>) : ("")} 
+                </div> 
+             </div> 
+            ) : ("")} 
 
 
             {/* Slide Carousel */}
@@ -119,7 +120,7 @@ function App() {
 
 <div>
     <img src="https://buywinesonline.com/cdn/shop/collections/tasting_set_600x600_crop_center.jpg?v=1656710150" alt=""/>
-    <img src="https://64dc647497ed712d3fab4cb5--lambent-quokka-6e7d37.netlify.app/Images/vertical%20img.jpg" alt=""/>
+    <img id='secoundImg' src="https://64dc647497ed712d3fab4cb5--lambent-quokka-6e7d37.netlify.app/Images/vertical%20img.jpg" alt=""/>
 </div>
 
 </div>

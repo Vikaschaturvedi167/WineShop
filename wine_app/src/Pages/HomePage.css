@@ -157,9 +157,71 @@
   #wine_bottles img{
     width: 100%;
   }
-  @media (max-width:500px){
+
+  @media (max-width : 900px){
+    #secoundImg{
+      display: none;
+    }
+    #wine_bottles div{
+      border: none;
+    }
+    #container_4>div{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    #container_4>div>img{
+      width: 100%;
+    }
+    #container_3{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media (max-width:700px){
+.content{
+  display: none;
+}
+#secoundImg{
+  display: none;
+}
+#container_3{
+  display: flex;
+  flex-direction: column;
+}
     #wine_bottles div h3{
       display:none;
+    }
+    #wine_bottles div{
+      border: none;
+    }
+    #container_4>div>img{
+      width: 100%;
+    }
+
+    #container_4>div{
+      display: flex;
+      flex-direction: column;
+    }
+    /* #wine_bottles{
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    } */
+    
+    /* #wine_bottles div{
+      height: 800px;
+    } */
+    #wine_bottles{
+      display: flex;
+      flex-direction: column;
+      /* border: 1px solid red;  */
+      height: 2500px;
+      gap: 450px;
+    }
+    #wine_bottles>div{
+      height: 800px;
+      /* border: 2px solid yellow; */
     }
     #container_1 h2{
       font-size: 18px;
@@ -167,6 +229,11 @@
     #container_1 > div  div{
       /* border: 10px solid ; */
       height: 130px;
+    }
+    #container_1{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
     }
   
   }
@@ -217,6 +284,9 @@
     color: black;
   }
   @media (max-width:500px){
+    #wine_bottles div{
+      border: none;
+    }
     #container_2 > div{
       display: grid;
       grid-template-columns: repeat(1,1fr);
@@ -228,6 +298,12 @@
       display: flex;
       flex-direction: column;
     }
+    #container_3{
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+    }
+    
   }
   
   /* container_3 */
@@ -266,6 +342,18 @@
     }
     #container_3{
       justify-content: center;
+    }
+    #wine_bottles{
+      display: flex;
+      flex-direction: column;
+      border: none; 
+      height: 2000px;
+      gap: 350px;
+    }
+    #wine_bottles>div{
+      /* height: 800px;/ */
+      /* border: 2px solid yellow; */
+      border: none; 
     }
   }
   
@@ -307,6 +395,18 @@
     }
     #container_4_2div > div img{
      display: none;
+    }
+    #container_4_2div{
+      display: flex;
+      flex-direction: column;
+    }
+    #insta{
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+    }
+    #insta>img{
+      width: 150px;
     }
    }
   
@@ -362,6 +462,26 @@
     #container_5{
       display: none;
     }
+    #container_4{
+      display: flex;
+      flex-direction: column;
+    }
+    #insta{
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+    }
+    #secoundImg{
+      display: none;
+    }
+    #insta img{
+      /* display: flex; */
+      width: 100%;
+      margin-left: 10%;
+      gap: 20px;
+      height: 300px;
+      margin-bottom: 50px;
+    }
   }
   
   /* footer part css  */
@@ -400,4 +520,63 @@
   #container_7 > div a:hover, p:hover{
     cursor: pointer;
     color: red;
+  }
+
+
+  @media (max-width: 768px) {
+    .slider {
+      height: 300px;
+    }
+  
+    .slide .content div h1 {
+      font-size: 3em;
+      line-height: 60px;
+      z-index: 20;
+    }
+  }
+  
+  @media (max-width: 380px) {
+    .slider {
+      height: 200px;
+    }
+    #container_4{
+      display: flex;
+      flex-direction: column;
+    }
+    #wine_bottles{
+      display: flex;
+      flex-direction: column;
+      border: 0px solid black;
+      margin-bottom: 0px;
+      height: 1600px;
+      /* gap: -40px; */
+    }
+    #wine_bottles div{
+      border: none;
+      gap: -50px;
+      margin-bottom: -50px;
+    }
+    .slide .content div p {
+      font-size: 0.9em;
+      z-index: 20;
+    }
+  
+    .slide .content div a {
+      font-size: 0.9em;
+      z-index: 20;
+    }
+  } 
+
+  @media (max-width:500px){
+    #wine_bottles div h3{
+      display:none;
+    }
+    #container_1 h2{
+      font-size: 18px;
+    }
+    #container_1 > div  div{
+      /* border: 10px solid ; */
+      height: 130px;
+    }
+  
   }
