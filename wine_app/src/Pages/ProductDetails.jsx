@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, NavLink, useNavigate } from "react-router-dom"
+import { Link, NavLink, json, useNavigate } from "react-router-dom"
 import CartPage from './CartPage';
 import "./ProductDetail.css"
 
@@ -8,7 +8,7 @@ const ProductDetails = ({id='1'}) => {
 
   const [randomNumbers, setRandomNumbers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+// const localId
  
   
     const generateRandomNumbers = () => {
@@ -31,20 +31,20 @@ const [productID , setProductID]=useState('');
 const [heart , setHeart]=useState('🤍');
 const [btn , setBtn]=useState('Add to Cart');
 
-const getProductDetails = async (id) => {
-  try {
-    setIsLoading(true);
-    const res = await fetch(Myurl);
-    const data = await res.json();
-    setIsLoading(false)
-    console.log(data);
-    setPdata(data)
-    // console.log("Hello")
-  } 
-  catch (error) {
-    console.log(error)
-  }
-}
+// const getProductDetails = async (id) => {
+//   try {
+//     setIsLoading(true);
+//     const res = await fetch(Myurl);
+//     const data = await res.json();
+//     setIsLoading(false)
+//     console.log(data);
+//     setPdata(data)
+//     // console.log("Hello")
+//   } 
+//   catch (error) {
+//     console.log(error)
+//   }
+// }
 // console.log("Hel")
 
 const handleClick = ()=>{
@@ -60,8 +60,24 @@ const heartClick = ()=>{
 
 }
 
+const SendTOcart = ()=>{
+  setBtn("Added")
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const SendCart = [...cart,pData]
+  localStorage.setItem('cart', JSON.stringify(SendCart));
+  Navigate("/Cart")
+}
+
+
+
 useEffect(()=>{
-getProductDetails(id)
+// getProductDetails(id)
+var storedData = localStorage.getItem("details");
+
+// Parsing the retrieved data as JSON
+var parsedData = JSON.parse(storedData);
+setPdata(parsedData)
 generateRandomNumbers()
 },[])
 
@@ -115,9 +131,9 @@ return (
       <div id="paymentDiv">
         <div id="priceDiv">${pData.price}</div>
         <div id="cartDiv">
-          <button onClick={handleClick}>{btn}</button>
+          <button onClick={SendTOcart}>{btn}</button>
         </div>
-        <div id="quickOrderDiv" onClick={() =>{  Navigate("/Cart")}}>
+        <div id="quickOrderDiv" onClick={() =>{ SendTOcart()}}>
           <button>Quick order</button>
         </div>
         

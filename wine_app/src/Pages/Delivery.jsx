@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import"../css/Delivery.css"
+import "../Pages/css/Delivery.css"
 import ShortCart from "./ShortCart";
+import { useNavigate } from "react-router-dom";
 
 export default function Delivery() {
     const [formData, setFormData] = useState({
@@ -10,6 +11,8 @@ export default function Delivery() {
       emailAddress: '',
       optionalMessage: '',
     });
+
+    const navigate =  useNavigate();
   
     const handleInputChange = (e) => {
       setFormData({
@@ -20,16 +23,7 @@ export default function Delivery() {
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      const { firstName, lastName, phoneNumber, emailAddress } = formData;
-  
-      if (!firstName || !lastName || !phoneNumber || !emailAddress) {
-        alert('Please Fill All Details');
-      } else {
-        // Redirect or perform other actions on form submission success
-        console.log('Redirecting to delivery page...');
-        // Uncomment the next line when you have the proper routing logic in place
-        // history.push('/deliverypage');
-      }
+      navigate('/Payment')
     };
   
     // Placeholder for product data
@@ -45,7 +39,7 @@ export default function Delivery() {
   
     return (
       <div id="info">
-        <div id="left">
+        <div id="leftD">
           <div>
             <h1>Checkout</h1>
           </div>
@@ -74,7 +68,7 @@ export default function Delivery() {
               <input type="text" placeholder="Enter Lamdmark" id="" onChange={handleInputChange} /><br />
               <label htmlFor="optionalMessage">Any message (optional)</label><br />
               <input type="text" id="optionalMessage" onChange={handleInputChange} />
-              <button type="submit" id="submit">Continue</button>
+              <button type="submit" id="submit" >Continue</button>
             </form>
           </div>
         </div>

@@ -1,18 +1,20 @@
 import React,{ useState } from 'react';
 import './PagesCss/LoginPage.css';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import firebase from './firebaseConfig';
 
 const SignupPage=()=> {
     const [name,setName]=useState('')
     const [email,setEmail]=useState('')
     const [pass,setPass]=useState('')
+    const navigate = useNavigate();
     const submit = async() =>{
        
         try {
             const user = await firebase.auth().createUserWithEmailAndPassword(email,pass)
             if(user){
                 alert('Account Created successfully')
+                navigate("/")
             }
         } 
         catch (error) {

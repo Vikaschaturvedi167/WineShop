@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { AllRoute } from './routing/AllRoute';
 import Navbar from './components/Navbar';
+import Footer from './Pages/Footer'
 import CartPage from './Pages/CartPage';
 // import ShortCart from './Pages/ShortCart';
 // import CheckOutPage from './Pages/CheckOutPage';
@@ -11,9 +12,10 @@ import CartPage from './Pages/CartPage';
 function App() {
   return (
     <div>
-    {/* <Navbar />
-    <AllRoute /> */}
-<CartPage/>
+    <Navbar />
+    <AllRoute />
+    <Footer />
+
     {/* <ShortCart/> */}
     {/* <CheckOutPage/> */}
 {/* {<PaymentPage/>} */}

@@ -31,7 +31,7 @@ body {
 #display-div img{
     margin: 0 0 5px 5px;
     width: 90px;
-    height: 90px;
+    height: 120px;
 }
 #display-div > div{
     border-top: 1px solid grey;
@@ -140,67 +140,6 @@ button:hover{
 
 /* 
 .........................................................................toggel switch */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 32px; /* Decreased width */
-    height: 16px; /* Decreased height */
-    border: 1px solid #bf0d12;
-    border-radius: 30px;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fff8e9;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 12px; /* Decreased thumb height */
-    width: 12px; /* Decreased thumb width */
-    left: 2px; /* Decreased left offset */
-    bottom: 2px; /* Decreased bottom offset */
-    background-color: #bf0d12;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  
-  input:checked + .slider {
-    background-color: #bf0d12;
-    
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #bf0d12;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(16px);
-    -ms-transform: translateX(16px);
-    transform: translateX(16px);
-    background-color: #fff8e9;
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 30px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-    
-   
-  }
-
 
 
 

@@ -6,34 +6,10 @@ export default function ShortCart () {
 
   useEffect(() => {
     // Initial data (replace this with your actual initial data)
-    const initialData = [
-      {
-        name: "Château Margaux",
-        image_url:
-          "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2017/11/margaux-2015-limited-release.jpg",
-        qty: 2,
-        price: 25.99,
-        quantity: 10,
-        productCode: "Product code: 15937",
-        crossProce: 29.9,
-        year: 2015,
-      },
-      {
-        name: "Chardonnay Reserve",
-        image_url:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoMp6R04hnvUdeMuJLvlXafVxJNNSo7bwVuW6JE27lj9szwekR9eaf6HUWaqxfy4U0o_8&usqp=CAU",
-        qty: 1,
-        price: 19.99,
-        quantity: 15,
-        productCode: "Product code: 15937",
-        crossProce: 29.9,
-        year: 2015,
-      },
+    const initialData = JSON.parse(localStorage.getItem("cart")) || [];
       // Add more initial data as needed
-    ];
-
-    // Set initial data to state
-    setCartItems(initialData);
+      const itemsWithQuantity = initialData.map(item => ({ ...item, qty: 1 }));
+      setCartItems(itemsWithQuantity);
   }, []);
 
   const totalPriceShow = () => {
@@ -49,13 +25,13 @@ export default function ShortCart () {
     updatedCart.splice(index, 1);
     setCartItems(updatedCart);
   };
-
   const handleQuantityChange = (index, newQty) => {
-    const updatedCart = [...cartItems];
-    updatedCart[index].qty = newQty;
-    setCartItems(updatedCart);
+    if (newQty >= 0) {
+      const updatedCart = [...cartItems];
+      updatedCart[index].qty = newQty;
+      setCartItems(updatedCart);
+    }
   };
-
   return (
     <div id="cart-div">
       <h1>Your Order</h1>
@@ -65,11 +41,11 @@ export default function ShortCart () {
         {cartItems.map((item, index) => (
           <div key={index} style={{display:"flex", justifyContent:"space-between"}}>
             {/* Render your item details here */}
-            <img src={item.image_url} alt={item.name} />
+            <img src={item.img_url} alt={item.name} />
             <div style={{width:"200px"}}>
 
                 <h4>{item.name}</h4>
-                <p id="productCode">Year:{item.year}</p>
+                <p id="productCode">Region :{item.region}</p>
                 <h4>${(item.price * item.qty).toFixed(2)}</h4>
             </div>
 

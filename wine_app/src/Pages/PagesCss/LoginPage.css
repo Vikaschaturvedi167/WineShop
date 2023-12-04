@@ -1,9 +1,9 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
-}
+} */
 .main_container_signup{
     background: #fff8e9;
     padding: 20px 30px;
@@ -45,8 +45,8 @@
 }
 .main_container_signup button{
     margin-top: 10px;
-    margin-left: 35%;
-    padding: 10px 30px;
+    margin-left: 0%;
+    padding: 0px 30px;
     border: none;
     outline: none;
     background: black;
@@ -54,4 +54,5 @@
     color: white;
     font-weight: 600;
     cursor: pointer;
+    margin-bottom: 80px;
 }

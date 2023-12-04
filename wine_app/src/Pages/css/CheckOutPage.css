@@ -5,7 +5,7 @@ body{
     padding: 30px 80px;
     display: flex;
 }
-#left{
+#leftC{
     border: 1px solid black;
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
     width: 70%;
@@ -66,7 +66,7 @@ input{
 #fullName input{
     width: 300px;
 }
-button{
+.checkout{
     width: 100%;
     height: 20px;
     margin-top: 15px;

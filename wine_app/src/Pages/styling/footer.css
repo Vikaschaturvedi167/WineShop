@@ -39,6 +39,7 @@
     margin: auto;
     justify-content: space-between;
     align-items: center;
+    padding: 3PX;
   }
   #bottom_footer h1{
     font-size: 110px;
@@ -63,9 +64,14 @@
       flex-direction: column;
       align-items: center;
     }
-    #subscribediv{
-      display: none;
-    }
+    /* #subscribediv{
+    
+    } */
+    /* #subscribe_btn{
+      padding: px;
+
+    } */
   }
+
   /* footer end */
     
