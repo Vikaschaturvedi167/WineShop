@@ -34,8 +34,11 @@ function App() {
 
             {/* Slide Carousel */}
             <div className='content'><h1>Wines form the best vineyards!</h1></div>
+
       <div class="slider">
+
         <div class="slides">
+
           <div class="slide">
             <img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt=""/>
             <div class="content">
@@ -144,11 +147,11 @@ function App() {
         <h4>A brief (troubled) history of Champagne</h4>
     </div>
     
-    <div>
+    {/* <div>
         <img src="https://www.raventos.com/store_site/api/uploads/products/images/original/b9f9685758b108e8c74725d8a3c1888d_phpWTH1Pq.jpg" alt=""/>
         <p>26/02/2023</p>
         <h4>The wines we have on our own table right now</h4>
-    </div>
+    </div> */}
     
 </div>
 
@@ -188,7 +191,7 @@ function App() {
             <img src="https://images.ctfassets.net/rxqefefl3t5b/4alBRNnYyWJuVwgkQSyoFU/a1dddd145a9f950c887865bc5e12f622/Virgin-Wines_Image-01.png?fl=progressive&q=80" alt=""/>
             <img src="https://www.niagaravintagewinetours.com/wp-content/uploads/2019/10/what-to-eat-with-wine.jpg" alt=""/>
         </div>
-
+<hr></hr>
      </div> 
     //  </div>
       // </div>  

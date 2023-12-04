@@ -1,0 +1,259 @@
+body{
+    background-color:#fff8e9;
+}
+#info{
+    padding: 30px 80px;
+    display: flex;
+}
+#left{
+    border: 1px solid black;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+    width: 60%;
+    padding: 20px;
+}
+#right{
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+    width: 30%;
+   
+    padding: 10px;
+
+}
+#topLeft{
+    display: flex;
+    justify-content: space-between;
+}
+#fullName{
+    display: flex;
+    justify-content: space-between;
+}
+#right{
+
+    padding: 0px 20px;
+}
+#topRight{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+}
+#topRight p{
+    color: cadetblue;
+    margin-top: 25px;
+}
+#freeShopping{
+    text-align: center;
+    border: 2px solid rgb(154, 241, 198);
+    padding: 5px;
+    border-radius: 3px;
+}
+h1{
+    font-size: 40px;
+}
+p{
+    padding: none;
+}
+label{
+    font-size: 20px;
+}
+.radio{
+    width: 20px;
+    background-color: #bf0d12;
+    font: inherit;
+  color: currentColor;
+  
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+}
+/* .input[type="radio" i]{
+    background-color: #bf0d12;
+} */
+/* input{
+   
+    border: 1px solid black;
+    font-size: 16px;
+    background-color: #fff8e9;
+} */
+#details{
+    margin-top: 30px;
+}
+#fullName input{
+    width: 300px;
+}
+button{
+    width: 100%;
+    height: 20px;
+    margin-top: 15px;
+   padding-top: 10px;
+   padding-bottom: 30px;
+    font-size: 20px;
+    background-color: #bf0d12;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.fa-solid{
+    margin-top: 20px;
+}
+
+#image img{
+    width: 60%;
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+}
+#discountPrice{
+    text-decoration: line-through;
+}
+#prices{
+    display: flex;
+    justify-content: space-between;
+}
+#total{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap');
+
+:root {
+  --primary: #bf0d12;
+  --secondary: #fffff;
+  --border-color: #bf0d12;
+}
+
+/* html {
+  height: 100%;
+ background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  font-family : Poppins;
+  color : white;
+} */
+
+body {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  display : flex;
+  padding :10px;
+  gap :2em;
+  align-items : center
+}
+
+.container {
+  width :50px;
+  aspect-ratio : 1;
+  overflow : hidden;
+  border-radius : 50%;
+  box-shadow : 2px 5px 5px rgba(0,0,0,0.2);
+}
+
+.cRadioBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff8e9;
+  position: relative;
+  border: solid 5px var(--border-color);
+  box-sizing: border-box;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+  
+}
+
+.cRadioBtn:hover {
+  border: solid 8px var(--primary);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--secondary);
+}
+
+.check:checked + label > .container > .cRadioBtn > .overlay {
+  background: #fff8e9;
+  animation: shrink 0.3s ease-in-out forwards;
+}
+
+.check:checked + label > .container  > .cRadioBtn {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.drops {
+  position: absolute;
+  background: #fff8e9;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.lgDrop {
+  width: 50%;
+}
+
+.xsDrop {
+  width: 20%;
+}
+
+.mdDrop {
+  width: 30%;
+}
+
+.check:checked + label > .container  > .cRadioBtn > .lgDrop {
+  animation: drop 0.5s ease-in-out forwards;
+}
+
+.check:checked + label > .container  > .cRadioBtn > .mdDrop {
+  animation: drop 0.8s ease-in forwards;
+}
+
+.check:checked + label > .container  > .cRadioBtn > .xsDrop {
+  animation: drop 0.9s linear forwards;
+}
+
+@keyframes drop {
+  0% {
+    top: -100%;
+  }
+  50% {
+    top: -100%;
+  }
+  75% {
+    top: 10%;
+  }
+  100% {
+    top: 25%;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0px;
+  }
+}
