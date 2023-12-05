@@ -18,7 +18,7 @@ const navigate = useNavigate();
       return acc + elem.price * elem.qty;
     }, 0);
 
-    return sum.toFixed(2); // Assuming you want to display the total with two decimal places
+    return sum.toFixed(2); 
   };
 
   const handleDelete = (index) => {
