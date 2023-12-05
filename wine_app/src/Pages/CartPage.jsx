@@ -46,7 +46,7 @@ const navigate = useNavigate();
       <div id="display-div">
         {cartItems.map((item, index) => (
           <div key={index} >
-            {/* Render your item details here */}
+            {/* Render your item details */}
             <img src={item.img_url} alt={item.name} />
             <div
               style={{
