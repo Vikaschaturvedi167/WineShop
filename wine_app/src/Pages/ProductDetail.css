@@ -213,6 +213,8 @@ background-color: #fff8e9;
     height: 30px;
     background-color: #BF0D12;
     color: white;
+    padding: 0px;
+    width: 100%;
 }
 
 #paymentDiv button:hover{
