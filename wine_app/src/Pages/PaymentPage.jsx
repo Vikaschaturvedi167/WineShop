@@ -17,7 +17,7 @@ export default function PaymentPage() {
       });
     };
   
-    
+
     const handleSubmit = (e) => {
       e.preventDefault();
       const { firstName, lastName, phoneNumber, emailAddress } = formData;
@@ -29,6 +29,7 @@ export default function PaymentPage() {
         console.log("Redirecting to delivery page...");
         // Uncomment the next line when you have the proper routing logic in place
         // history.push('/deliverypage');
+        
       }
     };
   
