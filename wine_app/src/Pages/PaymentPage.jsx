@@ -17,6 +17,7 @@ export default function PaymentPage() {
       });
     };
   
+    
     const handleSubmit = (e) => {
       e.preventDefault();
       const { firstName, lastName, phoneNumber, emailAddress } = formData;
@@ -76,7 +77,7 @@ export default function PaymentPage() {
             recusandae libero adipisci, saepe odit, laborum vero odio autem nisi
             voluptate nemo eum!
           </p>
-          <hr />
+          <hr/>
 
           <div
             class="main"
