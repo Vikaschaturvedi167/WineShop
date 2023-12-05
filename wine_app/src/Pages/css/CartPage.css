@@ -30,8 +30,8 @@ body {
 
 #display-div img{
     margin: 0 0 5px 5px;
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 150px;
 }
 #display-div > div{
     border-top: 1px solid grey;
@@ -59,7 +59,7 @@ body {
     border: none;
 }
 
-button{
+.cartButton{
     background-color: #fff8e9;
     margin: 10px;
     height: 20px;

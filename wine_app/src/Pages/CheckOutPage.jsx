@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import ShortCart from './ShortCart';
 import "./css/CheckOutPage.css"
+import { useNavigate } from "react-router-dom";
 export default function CheckOutPage() {
     const [formData, setFormData] = useState({
       firstName: '',
@@ -10,7 +11,7 @@ export default function CheckOutPage() {
       emailAddress: '',
       optionalMessage: '',
     });
-  
+  const Navigate = useNavigate()
     const handleInputChange = (e) => {
       setFormData({
         ...formData,
@@ -45,7 +46,7 @@ export default function CheckOutPage() {
   
     return (
       <div id="info">
-        <div id="left">
+        <div id="leftC">
           <div>
             <h1>Checkout</h1>
           </div>
@@ -74,7 +75,7 @@ export default function CheckOutPage() {
               <input type="text" placeholder="Enter Email Address" id="email" onChange={handleInputChange} /><br />
               <label htmlFor="optionalMessage">Your message (optional)</label><br />
               <input type="text" id="optionalMessage" onChange={handleInputChange} />
-              <button type="submit" id="submit">Continue</button>
+              <button type="submit" id="submit" className="checkout" onClick={()=>{Navigate('/Delivery')}}>Continue</button>
             </form>
           </div>
         </div>

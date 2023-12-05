@@ -1,39 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import "./css/CartPage.css"
+import { useNavigate } from 'react-router-dom';
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
   const [over18, set18] = useState(false);
-
+const navigate = useNavigate();
   useEffect(() => {
     // Initial data (replace this with your actual initial data)
-    const initialData = [
-      {
-        name: "Château Margaux",
-        image_url:
-          "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2017/11/margaux-2015-limited-release.jpg",
-        qty: 2,
-        price: 25.99,
-        quantity: 10,
-        productCode: "Product code: 15937",
-        crossProce: 29.9,
-        year: 2015,
-      },
-      {
-        name: "Chardonnay Reserve",
-        image_url:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoMp6R04hnvUdeMuJLvlXafVxJNNSo7bwVuW6JE27lj9szwekR9eaf6HUWaqxfy4U0o_8&usqp=CAU",
-        qty: 1,
-        price: 19.99,
-        quantity: 15,
-        productCode: "Product code: 15937",
-        crossProce: 29.9,
-        year: 2015,
-      },
+    const initialData = JSON.parse(localStorage.getItem("cart")) || [];
       // Add more initial data as needed
-    ];
-
-    // Set initial data to state
-    setCartItems(initialData);
+      const itemsWithQuantity = initialData.map(item => ({ ...item, qty: 1 }));
+      setCartItems(itemsWithQuantity);
   }, []);
 
   const totalPriceShow = () => {
@@ -49,12 +26,19 @@ const CartPage = () => {
     updatedCart.splice(index, 1);
     setCartItems(updatedCart);
   };
-
   const handleQuantityChange = (index, newQty) => {
-    const updatedCart = [...cartItems];
-    updatedCart[index].qty = newQty;
-    setCartItems(updatedCart);
+    if (newQty >= 0) {
+      const updatedCart = [...cartItems];
+      updatedCart[index].qty = newQty;
+      setCartItems(updatedCart);
+    }
   };
+
+
+  const OnSubmit =()=>{
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    navigate('/cartcheckout')
+  }
 
   return (
     <div id="cart-div" style={{width:"50%", marginLeft:"350px"}}>
@@ -63,7 +47,7 @@ const CartPage = () => {
         {cartItems.map((item, index) => (
           <div key={index} >
             {/* Render your item details here */}
-            <img src={item.image_url} alt={item.name} />
+            <img src={item.img_url} alt={item.name} />
             <div
               style={{
                 display: "flex",
@@ -77,7 +61,7 @@ const CartPage = () => {
               }}
             >
               <h5 >{item.name}</h5>
-              <p id="productCode">Year:{item.year}</p>
+              <p id="productCode">Region: {item.region}</p>
             </div>
 
             {/* <p>{item.productCode}</p> */}
@@ -87,6 +71,7 @@ const CartPage = () => {
               style={{ display: "flex", flexDirection: "column" }}
             >
               <button
+              className='cartButton'
                 disabled={item.qty == 0}
                 onClick={() => handleQuantityChange(index, item.qty - 1)}
               >
@@ -98,13 +83,13 @@ const CartPage = () => {
                 onChange={(e) => handleQuantityChange(index, e.target.value)}
               /> */}
               <h5 style={{ textAlign: "center" }}>{item.qty}</h5>
-              <button onClick={() => handleQuantityChange(index, item.qty + 1)}>
+              <button className='cartButton' onClick={() => handleQuantityChange(index, item.qty + 1)}>
               +
               </button>
             </div>
             <h5>${(item.price * item.qty).toFixed(2)}</h5>
             <div id="delete-div">
-              <button onClick={() => handleDelete(index)}>Remove</button>
+              <button className='cartButton' onClick={() => handleDelete(index)}>Remove</button>
             </div>
           </div>
         ))}
@@ -141,7 +126,7 @@ const CartPage = () => {
         <button
           id={!over18 ? "checkoutBtn-disabled" : "checkoutBtn"}
           disabled={!over18}
-          onClick={() => (window.location.href = "#")}
+          onClick={() => (OnSubmit())}
         >
           <span>Checkout </span>
         </button>
@@ -151,3 +136,29 @@ const CartPage = () => {
 };
 
 export default CartPage;
+
+
+// category
+// : 
+// "Red Wine"
+// flag
+// : 
+// "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
+// id
+// : 
+// 4
+// img_url
+// : 
+// "https://images.vivino.com/thumbs/OpZa3okqQzuG6HUbGkusqQ_pb_x600.png"
+// name
+// : 
+// "Adaptation Cabernet Sauvignon 2018"
+// price
+// : 
+// "4990"
+// rating
+// : 
+// "4"
+// region
+// : 
+// "California"

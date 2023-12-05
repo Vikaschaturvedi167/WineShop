@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./css/PaymentPage.css";
 import ShortCart from './ShortCart';
+import { useNavigate } from "react-router-dom";
 export default function PaymentPage() {
     const [formData, setFormData] = useState({
       firstName: "",
@@ -9,6 +10,7 @@ export default function PaymentPage() {
       emailAddress: "",
       optionalMessage: "",
     });
+    const Navigate = useNavigate();
   
     const handleInputChange = (e) => {
       setFormData({
@@ -46,7 +48,7 @@ export default function PaymentPage() {
   
     return (
       <div id="info">
-        <div id="left">
+        <div id="leftP">
         <div>
           <h1 style={{textAlign:"center"}}>Payment</h1>
         </div>
@@ -115,6 +117,7 @@ export default function PaymentPage() {
               <h2>Online Payment</h2>
             </label>
           </div>
+          <button type="submit" id="submit" onClick={()=>{Navigate("/thankyou")}} >Continue</button>
         </div>
       </div>
         <div>

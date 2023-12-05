@@ -109,6 +109,7 @@
     text-align: center;
   }
   #popup-content button{
+    color: black;
     font-family: 'Nunito', sans-serif; 
     font-weight: bold;
     background-color: #FFF8E9;
