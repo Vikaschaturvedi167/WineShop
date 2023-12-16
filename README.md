@@ -1,3 +1,4 @@
+
 # WineShop_project
 *A collaborative project from Masai school.*
 
@@ -44,7 +45,7 @@ we gave our best to clone this website.
 
 This is the homepage of our Project. 
 
-
+![Screenshot (574)](https://github.com/Vikaschaturvedi167/WineShop_project/assets/129252454/e62e5dcd-3bd5-46b7-83e0-da2f54926732)
 
 *Login or signup page.*
 
