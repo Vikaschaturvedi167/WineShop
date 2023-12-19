@@ -40,7 +40,7 @@ we gave our best to clone this website.
 
 *Images of our project.*
 
-*Homepage.*
+*Homepage. *
 
 This is the homepage of our Project. 
 
