@@ -25,7 +25,7 @@ Sajid Ansari. (https://github.com/Sajid788)
 
 Rensi Dudhat. (https://github.com/Rensi2411)
 <div>
-<h3>Techstack : React javaScript HTML CSS Images of our project.</h3>
+<h3>Techstack : React javaScript HTML CSS , firebase, json-server</h3>
 </div>
 *In the construct week.*
 
