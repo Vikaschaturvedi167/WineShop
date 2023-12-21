@@ -24,8 +24,9 @@ Narsimma Yemul. (https://github.com/Narsimmayemul)
 Sajid Ansari. (https://github.com/Sajid788)
 
 Rensi Dudhat. (https://github.com/Rensi2411)
-<h1>Techstack : React javaScript HTML CSS Images of our project.</h1>
-
+<div>
+<h3>Techstack : React javaScript HTML CSS Images of our project.</h3>
+</div>
 *In the construct week.*
 
 This is our Third collaborative project from the Masai school, and we got only 1 week to complete it, 
