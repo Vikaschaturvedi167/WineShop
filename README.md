@@ -40,7 +40,7 @@ The Masai school give our team to clone the website Mine Wine.
 Mine Wine is a popular Wine's company known for its minimalist and clean Wine's quality. They sell a variety of Wine's, and they have an online store where you can browse and purchase their products.
 we gave our best to clone this website.
 
-*Images of our project.*
+
 
 *Homepage.*
 ![MineWine](https://github.com/Vikaschaturvedi167/WineShop_project/assets/132068537/96bf211e-0523-41f3-a5c8-6c8410f2f15a)
