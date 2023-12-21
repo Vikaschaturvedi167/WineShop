@@ -37,7 +37,7 @@ we failed a lot of times but we never give up, we used to help each other solve 
 The Masai school give our team to clone the website Mine Wine. 
 Mine Wine is a popular Wine's company known for its minimalist and clean Wine's quality. They sell a variety of Wine's, and they have an online store where you can browse and purchase their products.
 we gave our best to clone this website.
-
+Techstack : React javaScript HTML CSS 
 *Images of our project.*
 
 *Homepage.*
