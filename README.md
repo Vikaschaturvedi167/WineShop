@@ -41,16 +41,19 @@ we gave our best to clone this website.
 *Images of our project.*
 
 *Homepage.*
+![MineWine](https://github.com/Vikaschaturvedi167/WineShop_project/assets/132068537/96bf211e-0523-41f3-a5c8-6c8410f2f15a)
 
 This is the homepage of our Project. 
 
 
 
 *Login or signup page.*
+<img width="960" alt="Screenshot 2023-12-21 080430" src="https://github.com/Vikaschaturvedi167/WineShop_project/assets/132068537/018b2d1d-7642-4717-9da4-c1a42826efa3">
 
 
 
 *Product page.*
+<img width="960" alt="Screenshot 2023-12-21 080415" src="https://github.com/Vikaschaturvedi167/WineShop_project/assets/132068537/15d80eaa-4459-4bd1-8406-98e69a7de05b">
 
 
 
@@ -59,6 +62,7 @@ This is the homepage of our Project.
 
 
 *Checkout page*
+<img width="960" alt="Screenshot 2023-12-21 080510" src="https://github.com/Vikaschaturvedi167/WineShop_project/assets/132068537/8e1b28a2-cab7-418e-975c-4c1c2435c79f">
 
 
 
