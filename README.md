@@ -24,6 +24,7 @@ Narsimma Yemul. (https://github.com/Narsimmayemul)
 Sajid Ansari. (https://github.com/Sajid788)
 
 Rensi Dudhat. (https://github.com/Rensi2411)
+<h1>Techstack : React javaScript HTML CSS Images of our project.</h1>
 
 *In the construct week.*
 
@@ -37,7 +38,7 @@ we failed a lot of times but we never give up, we used to help each other solve 
 The Masai school give our team to clone the website Mine Wine. 
 Mine Wine is a popular Wine's company known for its minimalist and clean Wine's quality. They sell a variety of Wine's, and they have an online store where you can browse and purchase their products.
 we gave our best to clone this website.
-Techstack : React javaScript HTML CSS 
+
 *Images of our project.*
 
 *Homepage.*
