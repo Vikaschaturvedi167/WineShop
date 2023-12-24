@@ -3,7 +3,6 @@
 
 *Deployed Link*
 
-https://app.netlify.com/sites/astounding-paletas-024cf6/deploys/656df79625c82c0f30427cdf
 
 
 
